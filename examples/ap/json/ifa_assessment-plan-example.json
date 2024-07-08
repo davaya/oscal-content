@@ -1,51 +1,36 @@
 {
   "assessment-plan": {
-    "uuid": "60077e84-e62f-4375-8c6c-b0e0d4560c5f",
-    "metadata": {
-      "title": "IFA GoodRead Assessment Plan",
-      "last-modified": "2024-02-01T13:57:28.355446-04:00",
-      "version": "1.0",
-      "oscal-version": "1.1.2",
-      "roles": [
-        {
-          "id": "assessor",
-          "title": "IFA Security Control Assessor"
-        }
-      ],
-      "parties": [
-        {
-          "uuid": "e7730080-71ce-4b20-bec4-84f33136fd58",
-          "type": "person",
-          "name": "Amy Assessor",
-          "member-of-organizations": [
-            "3a675986-b4ff-4030-b178-e953c2e55d64"
-          ]
-        },
-        {
-          "uuid": "3a675986-b4ff-4030-b178-e953c2e55d64",
-          "type": "organization",
-          "name": "Important Federal Agency",
-          "short-name": "IFA",
-          "links": [
-            {
-              "href": "https://www.ifa.gov",
-              "rel": "website"
-            }
-          ]
-        }
-      ],
-      "responsible-parties": [
-        {
-          "role-id": "assessor",
-          "party-uuids": [
-            "e7730080-71ce-4b20-bec4-84f33136fd58"
-          ]
-        }
-      ]
-    },
-    "import-ssp": {
-      "href": "../3-implementation/ssp.oscal.xml"
-    },
+    "tasks": [
+      {
+        "uuid": "b3504d22-0e75-4dd7-9247-618661beba4e",
+        "type": "action",
+        "title": "Examine Least Privilege Design and Implementation",
+        "associated-activities": [
+          {
+            "activity-uuid": "0d243b23-a889-478f-9716-6d4870e56209",
+            "subjects": [
+              {
+                "type": "component",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ],
+        "remarks": "Per IFA's use of NIST SP-800 53A, the assessor, with the support of the owner, information system security officer, and product team for the IFA GoodRead project, will examine least privilege design and implementation with the following:\n\n* list of security functions (deployed in hardware, software, and firmware) and security-relevant information for which access must be explicitly authorized;\n* system configuration settings and associated documentation;\n"
+      }
+    ],
+    "assessment-subjects": [
+      {
+        "type": "component",
+        "description": "The assessor for the IFA GoodRead Project, including the application and infrastructure for this information system, are within scope of this assessment.",
+        "include-all": {}
+      }
+    ],
     "local-definitions": {
       "activities": [
         {
@@ -112,6 +97,48 @@
         }
       ]
     },
+    "metadata": {
+      "title": "IFA GoodRead Assessment Plan",
+      "last-modified": "2024-02-01T13:57:28.355446-04:00",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "assessor",
+          "title": "IFA Security Control Assessor"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "e7730080-71ce-4b20-bec4-84f33136fd58",
+          "type": "person",
+          "name": "Amy Assessor",
+          "member-of-organizations": [
+            "3a675986-b4ff-4030-b178-e953c2e55d64"
+          ]
+        },
+        {
+          "uuid": "3a675986-b4ff-4030-b178-e953c2e55d64",
+          "type": "organization",
+          "name": "Important Federal Agency",
+          "short-name": "IFA",
+          "links": [
+            {
+              "href": "https://www.ifa.gov",
+              "rel": "website"
+            }
+          ]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "assessor",
+          "party-uuids": [
+            "e7730080-71ce-4b20-bec4-84f33136fd58"
+          ]
+        }
+      ]
+    },
     "reviewed-controls": {
       "control-selections": [
         {
@@ -128,36 +155,9 @@
         }
       ]
     },
-    "assessment-subjects": [
-      {
-        "type": "component",
-        "description": "The assessor for the IFA GoodRead Project, including the application and infrastructure for this information system, are within scope of this assessment.",
-        "include-all": {}
-      }
-    ],
-    "tasks": [
-      {
-        "uuid": "b3504d22-0e75-4dd7-9247-618661beba4e",
-        "type": "action",
-        "title": "Examine Least Privilege Design and Implementation",
-        "associated-activities": [
-          {
-            "activity-uuid": "0d243b23-a889-478f-9716-6d4870e56209",
-            "subjects": [
-              {
-                "type": "component",
-                "include-all": {}
-              }
-            ]
-          }
-        ],
-        "responsible-roles": [
-          {
-            "role-id": "assessor"
-          }
-        ],
-        "remarks": "Per IFA's use of NIST SP-800 53A, the assessor, with the support of the owner, information system security officer, and product team for the IFA GoodRead project, will examine least privilege design and implementation with the following:\n\n* list of security functions (deployed in hardware, software, and firmware) and security-relevant information for which access must be explicitly authorized;\n* system configuration settings and associated documentation;\n"
-      }
-    ]
+    "uuid": "60077e84-e62f-4375-8c6c-b0e0d4560c5f",
+    "import-ssp": {
+      "href": "../3-implementation/ssp.oscal.xml"
+    }
   }
 }
